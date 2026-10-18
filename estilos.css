@@ -1,0 +1,140 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #ffb6c9, #ff6f91, #ffc3d5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    overflow-x: hidden;
+}
+
+.corazones {
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+    animation: flotar 2s ease-in-out infinite;
+}
+
+.carta {
+    background: rgba(255, 255, 255, 0.94);
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(155, 30, 70, 0.25);
+    border: 2px solid white;
+    animation: aparecer 1.2s ease;
+}
+
+.corazon {
+    font-size: 65px;
+    animation: latir 1.2s infinite;
+}
+
+h1 {
+    color: #e84370;
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.subtitulo {
+    color: #a83256;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.linea {
+    height: 3px;
+    width: 100px;
+    background: #ff789c;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #e84370;
+    margin: 20px 0;
+}
+
+.mensaje {
+    color: #63404b;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.final {
+    margin-top: 30px;
+    font-size: 23px;
+}
+
+.firma {
+    color: #c04469;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+.decoracion {
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+footer {
+    color: white;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+}
+
+@keyframes latir {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 500px) {
+    .carta {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .mensaje {
+        font-size: 15px;
+    }
+}
